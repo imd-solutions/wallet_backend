@@ -1,0 +1,14 @@
+type Application {
+    name: String!
+    url: String!
+    version: String!
+    environment: String!
+    year: String!
+    address_1: String
+    address_2: String
+    city: String
+    county: String
+    postcode: String
+    phone: String
+    email: String
+}

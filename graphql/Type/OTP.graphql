@@ -1,0 +1,8 @@
+type OTP {
+    access_token: String
+    uid: Int
+    verified: Boolean
+    user: User
+    status: Int
+    message: String
+}

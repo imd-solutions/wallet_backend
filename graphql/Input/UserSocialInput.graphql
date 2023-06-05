@@ -1,0 +1,6 @@
+input UserSocialInput {
+    provider_id: String @rules(apply: ["required"], messages: { required: "Users provider ID is required."})
+    firstname: String
+    lastname: String
+    email: String
+}

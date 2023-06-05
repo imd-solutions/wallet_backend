@@ -1,0 +1,4 @@
+type AtlasLoginResponse {
+    success: String
+    token: String
+}

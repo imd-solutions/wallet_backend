@@ -1,0 +1,9 @@
+input UserUpdateInput {
+  id: ID
+  firstname: String
+  lastname: String
+  email: String
+  country_id: Int
+  currency_code: String
+  language_code: String
+}

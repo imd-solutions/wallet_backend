@@ -1,0 +1,43 @@
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-01-01 13:00:00`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+scalar DateTimeZone @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTimeTz")
+
+#Upload Scalar.
+scalar Upload
+@scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Upload")
+
+union Atlas @union(resolveType: "App\\GraphQL\\Unions\\Atlas@resolveType") = AtlasSuccessResponse | AtlasErrorResponse
+
+#import ./Type/Application.graphql
+#import ./Type/AtlasErrorResponse.graphql
+#import ./Type/AtlasFormResponse.graphql
+#import ./Type/AtlasLoginResponse.graphql
+#import ./Type/AtlasSuccessResponse.graphql
+#import ./Type/Message.graphql
+#import ./Type/OTP.graphql
+#import ./Type/Profile.graphql
+#import ./Type/TimeStamp.graphql
+#import ./Type/TopUp.graphql
+#import ./Type/Transaction.graphql
+#import ./Type/User.graphql
+#import ./Type/Wallet.graphql
+
+type Query {
+    application: Application!
+    @field(resolver: "App\\GraphQL\\Queries\\Application@resolve")
+}
+
+#import ./Query/User.graphql
+#import ./Query/Wallet.graphql
+
+type Mutation {
+    getTimeStamp(date: String!, time: String!): TimeStamp
+    @field(resolver: "App\\GraphQL\\Mutations\\TimeStamp@resolve")
+}
+
+#import ./Mutations/User.graphql
+#import ./Mutations/Wallet.graphql

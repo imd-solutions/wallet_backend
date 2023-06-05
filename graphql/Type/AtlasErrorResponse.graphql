@@ -1,0 +1,9 @@
+type AtlasErrorResponse {
+    type: String
+    message: String
+    errors: [Error]
+}
+
+type Error {
+    message: String
+}

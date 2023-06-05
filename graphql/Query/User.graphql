@@ -1,0 +1,6 @@
+# User query.
+extend type Query {
+    me: User @auth(guard: "api")
+    user(id: ID @eq): User! @guard(with: ["api"])  @field(resolver: "App\\GraphQL\\Queries\\User@single")
+    users: [User!]! @field(resolver: "App\\GraphQL\\Queries\\User@all")
+}

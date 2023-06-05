@@ -1,0 +1,5 @@
+input AtlasLoginInput {
+    email: String
+    password: String
+    transaction_id: String
+}

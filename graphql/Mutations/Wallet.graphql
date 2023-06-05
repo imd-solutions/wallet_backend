@@ -1,0 +1,12 @@
+# Mutations for the User's Wallet.
+#import ./../Input/AtlasLoginInput.graphql
+#import ./../Input/AtlasTopUpInput.graphql
+#import ./../Input/TopUpInput.graphql
+extend type Mutation {
+    walletLogin(input: AtlasLoginInput): AtlasLoginResponse
+    @field(resolver: "App\\GraphQL\\Mutations\\Wallet@login")
+    walletPaymentForm(input: AtlasTopUpInput): AtlasFormResponse
+    @field(resolver: "App\\GraphQL\\Mutations\\Wallet@paymentForm")
+    completeTopup(input: TopUpInput): Message
+    @field(resolver: "App\\GraphQL\\Mutations\\Wallet@completeTopUp")
+}

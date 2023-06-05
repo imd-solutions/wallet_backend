@@ -1,0 +1,10 @@
+type AtlasSuccessResponse {
+    providers: [Provider]
+}
+
+type Provider {
+    id: Int
+    isActive: Int
+    name: String
+    currency: String
+}

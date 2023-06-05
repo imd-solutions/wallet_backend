@@ -1,0 +1,8 @@
+# Wallet query.
+#import ./../Input/UserBalanceInput.graphql
+extend type Query {
+    userWallet: Wallet
+    @field(resolver: "App\\GraphQL\\Queries\\Wallet@balance")
+    userTransactions: [Transaction]
+    @field(resolver: "App\\GraphQL\\Queries\\Wallet@transactions")
+}

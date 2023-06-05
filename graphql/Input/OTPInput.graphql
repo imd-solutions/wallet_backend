@@ -1,0 +1,4 @@
+input OTPInput {
+    areaCode: String @rules(apply: ["required"], messages: { required: "AreaCode is required."})
+    phone: String @rules(apply: ["required"], messages: { required: "Phone number is required."})
+}

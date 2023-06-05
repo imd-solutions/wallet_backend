@@ -1,0 +1,4 @@
+input ConfirmOTPInput {
+    code: String @rules(apply: ["required"], messages: { required: "Code is required."})
+    phone: String @rules(apply: ["required"], messages: { required: "Phone number is required."})
+}

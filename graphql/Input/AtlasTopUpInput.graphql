@@ -1,0 +1,19 @@
+input AtlasTopUpInput {
+    token: String
+    country_id: Int
+    customer_id: Int
+    language: String
+    amount: String
+    transaction_id: Float
+    logo_url: String
+    background_colour: String
+    callback_url: String
+    error_url: String
+    success_url: String
+    extra_properties: ExtraProperty
+}
+
+input ExtraProperty {
+    bonus: String
+    bonus_text: String
+}

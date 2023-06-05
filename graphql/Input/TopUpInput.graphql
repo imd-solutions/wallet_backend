@@ -1,0 +1,8 @@
+input TopUpInput {
+    transaction_id: String
+    payment_method: String
+    amount: String
+    email: String
+    pkey: String
+    status: String
+}

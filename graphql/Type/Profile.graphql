@@ -1,0 +1,9 @@
+# Profile type
+type Profile {
+    firstname: String!
+    lastname: String!
+    country_id: Int
+    currency_code: String
+    language_code: String
+    balance: Float
+}

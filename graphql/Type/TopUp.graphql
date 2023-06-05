@@ -1,0 +1,4 @@
+type TopUp {
+    date: String!
+    time: String!
+}

@@ -1,0 +1,23 @@
+# Mutations for the Users.
+#import ./../Input/ConfirmOTPInput.graphql
+#import ./../Input/OTPInput.graphql
+#import ./../Input/UserInput.graphql
+#import ./../Input/UserSocialInput.graphql
+#import ./../Input/UserUpdateInput.graphql
+extend type Mutation {
+    userCreate(input: UserInput): User
+    @field(resolver: "App\\GraphQL\\Mutations\\User@create")
+    confirmUserEmail(code: String): Message
+    @field(resolver: "App\\GraphQL\\Mutations\\User@email")
+    userUpdate(input: UserUpdateInput): OTP
+    @field(resolver: "App\\GraphQL\\Mutations\\User@update")
+    resendConfirmationEmail(email: String): Message
+    @field(resolver: "App\\GraphQL\\Mutations\\User@resend")
+    userOTP(input: OTPInput): Message
+    @field(resolver: "App\\GraphQL\\Mutations\\User@createOTP")
+    userConfirmOTP(input: ConfirmOTPInput): OTP
+    @field(resolver: "App\\GraphQL\\Mutations\\User@confirmOTP")
+    userSocialLogin(input: UserSocialInput): OTP
+    @field(resolver: "App\\GraphQL\\Mutations\\User@socialLogin")
+}
+

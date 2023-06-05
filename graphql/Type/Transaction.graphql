@@ -1,0 +1,6 @@
+type Transaction {
+    amount: Float
+    payment_method: String
+    status: String
+    reference: String
+}

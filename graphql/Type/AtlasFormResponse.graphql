@@ -1,0 +1,4 @@
+type AtlasFormResponse {
+    status: Int
+    html: String
+}
